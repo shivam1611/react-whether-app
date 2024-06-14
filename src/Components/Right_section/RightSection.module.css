@@ -1,0 +1,5 @@
+.container{
+    background-color:var(--gray-color);
+    width: 65%;
+    height: 100%;
+}
