@@ -1,0 +1,75 @@
+.display {
+  height: 100%;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: var(--gray-color); */
+  gap: 0rem;
+  margin-top: 3rem;
+  flex-direction: column;
+  color: var(--black);
+  text-align: center;
+}
+
+.detail_section{
+    /* height: 50%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* gap: 3rem; */
+    align-items: center;
+    flex-direction: column;
+}
+.img_section{
+    width: 8.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 50%;
+    /* background-color: green; */
+}
+.img{
+    /* height: 100%; */
+    width: 100%;
+    /* background-color: purple; */
+}
+
+.text{
+    height: 60%;
+    position: relative;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+.temperature{
+    font-size: 4rem;
+}
+.symbol{
+    font-size: 3.3rem;
+    position: absolute;
+    top: o;
+    font-weight: lighter;
+}
+.situation_text{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.location_text{
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.time_text{
+    margin-top: 1rem;
+}
+.last_updated{
+    margin-top: 3.5rem;
+    font-size: .9rem;
+    color: var(--secondary-text);
+}
