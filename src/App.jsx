@@ -17,7 +17,7 @@ function App() {
     if (searchQuery.length > 3) {
       setIsLoading(true);
       fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${API_key}&q=${searchQuery}&aqi=yes`
+        `https://api.weatherapi.com/v1/current.json?key=${API_key}&q=${searchQuery}&aqi=yes`
       )
         .then((response) => response.json())
         .then((data) => {
