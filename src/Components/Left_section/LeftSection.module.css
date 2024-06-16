@@ -58,7 +58,7 @@
 .bottom_navigation{
     display: none;
     position: absolute;
-    bottom: 4rem;
+    bottom: 3rem;
     font-size: 2rem;
     animation: motion 1s linear infinite;
     opacity: .5;
@@ -67,10 +67,10 @@
 
 @keyframes motion {
     from{
-        bottom: 4rem;
+        bottom: 3rem;
     }
     to{
-        bottom: 3rem;
+        bottom: 2rem;
     }
     
 }
