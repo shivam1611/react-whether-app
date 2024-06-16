@@ -29,7 +29,7 @@ function LeftSection({
           Check
         </button>
       </form>
-      {isloading ? <Loader /> : <Display content={content} />}
+      {isloading ? <Loader /> : content &&  <Display content={content} />}
       {/* <Loader/> */}
     </div>
   );

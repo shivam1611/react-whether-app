@@ -1,5 +1,32 @@
 .container{
     background-color:var(--gray-color);
-    width: 65%;
+    width: 70%;
     height: 100%;
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.welcome_ui{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    flex-direction: column;
+    text-align: center;
+}
+.welcome_title{
+    font-size: 3rem;
+}
+.welcome_img{
+    width: 15rem;
+}
+.welcome_text{
+    font-size: .9rem;
+    text-align: center;
+    color: var(--secondary-text);
+    width: 60%;
+    line-height: 1.5rem;
 }

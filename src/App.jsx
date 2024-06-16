@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import LeftSection from "./Components/Left_section/LeftSection";
 import RightSection from "./Components/Right_section/RightSection";
+import { motion } from "framer-motion"
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -23,6 +24,7 @@ function App() {
           console.log(data);
           setContent(data);
           setIsLoading(false);
+          setSearchQuery("")
         });
     }
     return;
@@ -38,7 +40,7 @@ function App() {
         location={location}
         content={content}
       />
-      <RightSection />
+      <RightSection content={content} />
     </div>
   );
 }

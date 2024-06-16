@@ -32,3 +32,20 @@
   --secondary-text:rgb(46, 46, 46);
   --midnight:#003366;
 }
+
+.midnight_background{
+  background-color: #0e0767;
+background-image: linear-gradient(179deg, #0e0767 0%, #042599 100%);
+}
+.daylight_background{
+  background-color: #8ee2ff;
+background-image: linear-gradient(65deg, #8ee2ff 0%, #ffe6a7 50%, #ffffff 100%);
+
+}
+
+.midnight_card_background{
+  background-color: #020e3c;
+}
+.daylight_card_background{
+  background-color: #68a3d0;
+}
