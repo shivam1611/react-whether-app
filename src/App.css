@@ -1,4 +1,8 @@
-*{
+html{
+  scroll-behavior: smooth;
+}
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -6,46 +10,74 @@
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight:normal;
+  font-weight: normal;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
-
 
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
   height: 100vh;
   width: 100%;
-  /* margin: 1rem; */ 
+  /* margin: 1rem; */
+}
+
+@media  screen and (max-width:768px) {
+  .app{
+    flex-direction: column;
+    height: fit-content;
+    gap: 0rem;
+  }
+
+  
 }
 
 /* Global Variables for colors  */
 :root {
   --light-color: rgb(253, 253, 253);
   --gray-color: rgb(245, 245, 245);
-  --black:rgb(18, 18, 18);
-  --primary-color:#17B169;
-  --secondary-text:rgb(46, 46, 46);
-  --midnight:#003366;
+  --black: rgb(18, 18, 18);
+  --primary-color: #17b169;
+  --secondary-text: rgb(46, 46, 46);
+  --midnight: #003366;
 }
 
-.midnight_background{
+.midnight_gradient {
+  background-color: #16204e;
+  background-image: linear-gradient(180deg, #0e0767 0%, #042599 100%);
+  color: var(--light-color);
+}
+.midnight_background {
   background-color: #0e0767;
-background-image: linear-gradient(179deg, #0e0767 0%, #042599 100%);
+  background-image: linear-gradient(179deg, #0e0767 0%, #042599 100%);
 }
-.daylight_background{
+.light_text {
+  color: var(--light-color);
+}
+.dark_text {
+  color: var(--black);
+}
+.daylight_background {
   background-color: #8ee2ff;
-background-image: linear-gradient(65deg, #8ee2ff 0%, #ffe6a7 50%, #ffffff 100%);
-
+  background-image: linear-gradient(
+    65deg,
+    #8ee2ff 0%,
+    #ffe6a7 50%,
+    #ffffff 100%
+  );
+}
+.daylight_gradient {
+  background-color: #f7f7c3;
+  background-image: linear-gradient(180deg, #f7f7c3 0%, #ffffff 100%);
+  color: var(--black);
 }
 
-.midnight_card_background{
+.midnight_card_background {
   background-color: #020e3c;
 }
-.daylight_card_background{
+.daylight_card_background {
   background-color: #68a3d0;
 }

@@ -19,3 +19,14 @@
         transform: rotate(360deg);
     }
 }
+
+@media screen and (max-width:768px) {
+    .loader{
+        /* margin-bottom: 26rem; */
+        width: 8rem;
+        height: 8rem;
+        
+        
+    }
+    
+}
