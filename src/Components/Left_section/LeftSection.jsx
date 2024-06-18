@@ -8,10 +8,12 @@ import { motion } from "framer-motion";
 import { MyContext } from "../../context/Context";
 
 function LeftSection({}) {
-  // Handeling data using context API
+
+  // Handeling data using context API 
+
   const { handleSearch, searchQuery, setSearchQuery, content, isloading } =
     useContext(MyContext);
-
+    
   return (
     <motion.div
       className={`${classes.container} ${

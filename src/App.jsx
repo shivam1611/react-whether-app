@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import LeftSection from "./Components/Left_section/LeftSection";
 import RightSection from "./Components/Right_section/RightSection";
-import { motion } from "framer-motion";
 import { MyContext } from "./context/Context";
 
 function App() {
