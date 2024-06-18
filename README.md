@@ -1,6 +1,6 @@
 # React Weather App.
 
-### live webiste at :- https://react-blog-website.vercel.app/
+### live webiste at :- https://reatweathersite.netlify.app/
 
 ## concepts Are Used :
 
