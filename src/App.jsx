@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import LeftSection from "./Components/Left_section/LeftSection";
 import RightSection from "./Components/Right_section/RightSection";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { MyContext } from "./context/Context";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -24,24 +25,28 @@ function App() {
           console.log(data);
           setContent(data);
           setIsLoading(false);
-          setSearchQuery("")
+          setSearchQuery("");
         });
     }
     return;
   }
   return (
-    <div className="app">
-      <LeftSection
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        handleSearch={handleSearch}
-        isloading={isloading}
-        setIsLoading={setIsLoading}
-        location={location}
-        content={content}
-      />
-      <RightSection content={content} />
-    </div>
+    <MyContext.Provider
+      value={{
+        searchQuery: searchQuery,
+        setSearchQuery: setSearchQuery,
+        handleSearch: handleSearch,
+        isloading: isloading,
+        setIsLoading: setIsLoading,
+        content: content,
+        // location:location;
+      }}
+    >
+      <div className="app">
+        <LeftSection />
+        <RightSection  />
+      </div>
+    </MyContext.Provider>
   );
 }
 

@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 
 
+import { useContext } from "react";
 import classes from "./Display.module.css";
+import { MyContext } from "../../context/Context";
 
-function Display({ content }) {
+function Display() {
+  const {content} = useContext(MyContext)
   return (
     <>
       {content && (

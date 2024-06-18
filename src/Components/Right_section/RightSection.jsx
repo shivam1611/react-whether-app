@@ -3,20 +3,15 @@
 import Card from "../Card/Card";
 import classes from "./RightSection.module.css";
 import img from "../../assets/logo.png";
+import { useContext } from "react";
+import { MyContext } from "../../context/Context";
 
 // eslint-disable-next-line react/prop-types
-function RightSection({ content }) {
-  const title_array = [
-    "Feels Like",
-    "Wind",
-    "Visibility",
-    "Pressure",
-    "Heat Index",
-    "UV Index",
-    "precipitation Index",
-    "Wind Chill",
-    "Wind Gust",
-  ];
+function RightSection() {
+
+  // Handeling Data and state using context API
+  const {content} = useContext(MyContext)
+ 
 
   return (
     <>

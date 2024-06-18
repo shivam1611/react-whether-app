@@ -1,22 +1,22 @@
 /* eslint-disable react/prop-types */
 
+import { useContext } from "react";
 import Display from "../Display/Display";
 import Loader from "../Loader/Loader";
 import classes from "./LeftSection.module.css";
 import { motion } from "framer-motion";
+import { MyContext } from "../../context/Context";
 
-function LeftSection({
-  handleSearch,
-  searchQuery,
-  isloading,
-  setSearchQuery,
-  content,
-}) {
+function LeftSection({}) {
+  // Handeling data using context API
+  const { handleSearch, searchQuery, setSearchQuery, content, isloading } =
+    useContext(MyContext);
+
   return (
     <motion.div
       className={`${classes.container} ${
-        content?.current?.is_day == 1  &&  "daylight_gradient dark_text"} ${content?.current?.is_day == 0
-          && "midnight_gradient light_color"}`}
+        content?.current?.is_day == 1 && "daylight_gradient dark_text"
+      } ${content?.current?.is_day == 0 && "midnight_gradient light_color"}`}
     >
       <form
         className={classes.search_section}
