@@ -4,19 +4,21 @@ import Card from "../Card/Card";
 import classes from "./RightSection.module.css";
 import img from "../../assets/logo.png";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 import { MyContext } from "../../context/Context";
 
 // eslint-disable-next-line react/prop-types
 function RightSection() {
-
   // Handeling Data and state using context API
-  const {content} = useContext(MyContext)
- 
+  const { content } = useContext(MyContext);
 
   return (
     <>
       {content ? (
-        <div
+        <motion.div
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{duration:.5,stiffness:150}}
           className={`${classes.container} ${
             content?.current?.is_day == 0
               ? "midnight_background"
@@ -86,9 +88,14 @@ function RightSection() {
             content={content}
             subdetail={""}
           />
-        </div>
+        </motion.div>
       ) : (
-        <div className={`${classes.container} ${classes.welcome_ui}`}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: -10 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.5, stiffness: 200 }}
+          className={`${classes.container} ${classes.welcome_ui}`}
+        >
           <h1 className={classes.welcome_title}>React Wheather App</h1>
           <img src={img} alt="" className={classes.welcome_img} />
           <p className={classes.welcome_text}>
@@ -96,7 +103,7 @@ function RightSection() {
             going.Interactive Web Application based on API Data fetching and
             powered by cool animation and User Interface
           </p>
-        </div>
+        </motion.div>
       )}
     </>
   );

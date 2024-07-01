@@ -3,6 +3,7 @@ import "./App.css";
 import LeftSection from "./Components/Left_section/LeftSection";
 import RightSection from "./Components/Right_section/RightSection";
 import { MyContext } from "./context/Context";
+import {motion} from 'framer-motion'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,10 +42,14 @@ function App() {
         // location:location;
       }}
     >
-      <div className="app">
+      <motion.div className="app"
+      initial={{opacity:0,scale:.9}}
+      animate={{opacity:1,scale:1}}
+      transition={{duration:.6,stiffness:150}}
+      >
         <LeftSection />
         <RightSection  />
-      </div>
+      </motion.div>
     </MyContext.Provider>
   );
 }
